@@ -1,26 +1,50 @@
 import { styled } from "styled-components";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { WeatherContext } from "../contexts/weather.context";
 import Card from "./card.component";
 
 const CardContainer = () => {
-    // const { weatherData } = useContext(WeatherContext);
+    const { storedData } = useContext(WeatherContext);
+    console.log("STORED DATA",storedData)
     console.log("You are inside card container")
-    // console.log(weatherData)
+
 
     return (
+        <Container>
+        <span>Your Searches</span>
         <CardContainerDiv>
-            {/* {weatherData.length !=0 ? weatherData.map((item) => (
+            { storedData.length!=0 ? storedData.map((item) => (
                 <Card item={item} />
-            )) : <h3>No Data Found</h3>} */}
+            )) : <span>No Data Found</span>}
         </CardContainerDiv>
+        </Container>
     )
 }
 
 export default CardContainer;
 
+const Container = styled.div`
+    position:absolute;
+    top:180px;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    & span{
+        margin-bottom:10px;
+    }
+`
+
+
 const CardContainerDiv = styled.div`
-    height:720px;
-    width:1024px;
-    background-color:#e4e4e4;
+    height:70vh;
+    // height:calc(100vh-200px);
+    width:100%;
+    padding:10px 0;
+    // background-color:red;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    overflow-y:scroll;
 `
