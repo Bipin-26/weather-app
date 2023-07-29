@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 const Card = ({item}) => {
-    console.log("You are inside Card")
-    console.log("CARD ITEM", item)
+    // console.log("You are inside Card")
+    // console.log("CARD ITEM", item)
     // const [bgImg, setBgImg] = useState("")    // const [selectedCard, setSelectedCard] = useState();
 
     // const handleOnClick = (item) => {
@@ -38,7 +38,7 @@ const Card = ({item}) => {
     // console.log("WEATHER TYPE",bgImg)
     return (
         <>
-        <CardDiv bgImg={item.current.condition.icon} >
+        <CardDiv>
             {/* <CardItem item={item} /> */}
             <CardHeader>
                 <span>{item.current.temp_c} &#8451;</span>

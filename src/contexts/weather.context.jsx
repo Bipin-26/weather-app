@@ -24,14 +24,14 @@ const WeatherProvider = ({children}) => {
     const getWeather = async (location) => {
         searchLocation.push(location);
         const dummyData = storedData;
-        console.log("Input in context",location)
+        // console.log("Input in context",location)
         const response = await axios.get(`https://api.weatherapi.com/v1/forecast.json?key=dd5fec9dacb84141a3862335232507&q=${location}&days=1&aqi=yes&alerts=yes`);
         dummyData.push(response.data)
         localStorage.setItem('weatherData',JSON.stringify(dummyData))
         setStoredData([...storedData],response.data)       
     }
 
-    console.log("SEARCH LOCATION", searchLocation)
+    // console.log("SEARCH LOCATION", searchLocation)
 
     const clearAllData = () => {
         localStorage.clear();
@@ -48,7 +48,7 @@ const WeatherProvider = ({children}) => {
     setInterval(refreshWeather,1000*60*60);
 
 
-    console.log("WEATHER DATA------> ", storedData)
+    // console.log("WEATHER DATA------> ", storedData)
 
 
     return (

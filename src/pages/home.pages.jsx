@@ -1,7 +1,6 @@
 import { useContext, useEffect } from "react"
 import CardContainer from "../components/cardContainer.componet"
 import FormComponent from "../components/form.component"
-import { WeatherContext } from "../contexts/weather.context"
 import { styled } from "styled-components"
 const HomePage = () => {
     // const {weatherHistory} = useContext(WeatherContext);

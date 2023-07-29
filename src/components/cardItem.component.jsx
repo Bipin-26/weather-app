@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 import { WeatherContext } from "../contexts/weather.context";
 
 const CardItemModal = ({item}) => {
-    console.log("ITEM ================> ", item)
+    // console.log("ITEM ================> ", item)
     const { toggleModal, modalIsOpen } = useContext(WeatherContext);
     return(
         <>

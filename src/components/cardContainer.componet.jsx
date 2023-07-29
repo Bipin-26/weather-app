@@ -6,8 +6,8 @@ import CardItemModal from "./cardItem.component";
 
 const CardContainer = () => {
     const { storedData, clearAllData } = useContext(WeatherContext);
-    console.log("STORED DATA",storedData)
-    console.log("You are inside card container")
+    // console.log("STORED DATA",storedData)
+    // console.log("You are inside card container")
 
     const { modalIsOpen, toggleModal } = useContext(WeatherContext);
     const [ modalItem, setModalItem] = useState();
