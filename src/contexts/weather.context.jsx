@@ -25,7 +25,7 @@ const WeatherProvider = ({children}) => {
         searchLocation.push(location);
         const dummyData = storedData;
         console.log("Input in context",location)
-        const response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=dd5fec9dacb84141a3862335232507&q=${location}&days=1&aqi=yes&alerts=yes`);
+        const response = await axios.get(`https://api.weatherapi.com/v1/forecast.json?key=dd5fec9dacb84141a3862335232507&q=${location}&days=1&aqi=yes&alerts=yes`);
         dummyData.push(response.data)
         localStorage.setItem('weatherData',JSON.stringify(dummyData))
         setStoredData([...storedData],response.data)       

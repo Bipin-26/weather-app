@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { WeatherContext } from "../contexts/weather.context";
 import Card from "./card.component";
 import CardItemModal from "./cardItem.component";
