@@ -7,14 +7,12 @@ const FormComponent = () => {
 
     const handleOnSubmit = (e) =>{
         e.preventDefault();
-        // console.log("Input ==> ", input)
         getWeather(input);
         setInput("");
     }
     return (
         <FormContainer>
             <FormInput placeholder="Search Location" onChange={(e)=>setInput(e.target.value)} value={input} />
-            {/* {console.log(input)} */}
             <Button onClick={handleOnSubmit} >Get<br/>Weather</Button>
         </FormContainer>
     )
