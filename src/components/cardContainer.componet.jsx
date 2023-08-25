@@ -77,6 +77,10 @@ const CardContainerDiv = styled.div`
     border-radius: 50px;
   }
 
+  @media (max-width:768px){
+    height:fit-content;
+  }
+
 `;
 
 const ClearButton = styled.button`
